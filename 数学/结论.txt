@@ -1,0 +1,20 @@
+1.
+任何两个数a和b,每次操作可以让任意一个数+x(x由自己指定)，最小操作次数为
+if(abs(b-a)%x==0) ans=min(ans,(b-a)%x);
+ans=min(abs(b-a),ans);
+2.公约数
+只有一位不同时候
+x:11001000
+y:11000000
+考虑此时的gcd一定为:1000(二进制)
+3.公约数
+任意多个数，他们通过线性组合（加减）最小能凑出的数是：d=__gcd(all());
+即能凑出的所有数都是d的倍数。
+4.取模转换为加减法
+floor(10^n / m)%m=floor((10^n) % (m^2) / m)
+考虑到mod m ;可以转换为 -km;
+且-k*m^2可以转换为%m^2;
+则floor(10^n / m) % m=floor(10^n / m)-k*m;
+floor(10^n / m)-k*m=floor(10^n / m-k*m);
+floor(10^n / m-k*m)=floor((10^n-k*m^2) / m);
+floor((10^n-k*m^2) / m)=floor((10^n%m^2) / m)
